@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Purchase History</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='purchase.css') }}">
+</head>
+
+<body>
+
+<h1>Purchase History</h1>
+
+{% if sales %}
+
+<table border="1">
+<tr>
+<th>Product</th>
+<th>Price</th>
+</tr>
+
+{% for item in sales %}
+<tr>
+<td>{{ item['name'] }}</td>
+<td>₹{{ item['price'] }}</td>
+</tr>
+{% endfor %}
+
+</table>
+
+{% else %}
+
+<p>No purchase yet</p>
+
+{% endif %}
+
+<br><br>
+
+<a href="/user_dashboard">
+<button>Back to Dashboard</button>
+</a>
+
+</body>
+</html>

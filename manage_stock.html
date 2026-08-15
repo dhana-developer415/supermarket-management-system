@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Manage Stock</title>
+
+    <link rel="stylesheet" href="{{ url_for('static', filename='manage.css') }}">
+</head>
+<body>
+
+<div class="container">
+    <h2>📦 Manage Stock</h2>
+
+    <table>
+        <tr>
+            <th>Product Name</th>
+            <th>Current Stock</th>
+            <th>Update Stock</th>
+        </tr>
+
+        {% for product in products %}
+        <tr>
+            <td>{{ product.name }}</td>
+            <td>{{ product.quantity }}</td>
+            <td>
+                <form action="/update_stock/{{ product.id }}" method="POST">
+                    <input type="number" name="stock" required>
+                    <button type="submit">Update</button>
+                </form>
+            </td>
+        </tr>
+        {% endfor %}
+    </table>
+
+    <a href="/admin_dashboard">Back</a>
+</div>
+
+</body>
+</html>

@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>My Cart</title>
+
+    <!-- CSS Connect -->
+    <link rel="stylesheet" href="{{ url_for('static',filename='cart.css') }}">
+</head>
+<body>
+
+<div class="cart-container">
+    <h2>🛒 My Cart</h2>
+
+    {% if cart %}
+        <table>
+            <tr>
+                <th>Product</th>
+                <th>Price</th>
+                <th>Action</th>
+            </tr>
+
+            {% for item in cart %}
+            <tr>
+                <td>{{ item.name }}</td>
+                <td>₹{{ item.price }}</td>
+                <td>
+                    <a class="remove-btn" href="{{ url_for('remove_from_cart', id=item.id) }}">
+                        Remove
+                    </a>
+                </td>
+            </tr>
+            {% endfor %}
+        </table>
+
+        <h3 class="total">Total: ₹{{ total }}</h3>
+        <form action="{{ url_for('checkout') }}" method="POST">
+    <button type="submit" class="checkout-btn">
+        Proceed to Checkout
+    </button>
+</form>
+
+    {% else %}
+        <p class="empty">Your cart is empty 😢</p>
+    {% endif %}
+
+    <a href="{{ url_for('view_products') }}">View Products</a>
+</div>
+
+</body>
+</html>

@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>-
+    <title>Add Product</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- CSS Link -->
+    <link rel="stylesheet" href="{{ url_for('static', filename='add.css') }}">
+</head>
+
+<body>
+
+    <div class="container">
+        <div class="form-box">
+            <h2>Add New Product</h2>
+            <p>Enter product details below</p>
+
+            <form method="POST" action="/add_product">
+
+                <div class="input-group">
+                    <label>Product Name</label>
+                    <input type="text" name="product_name" required>
+                </div>
+
+                <div class="input-group">
+                    <label>Category</label>
+                    <input type="text" name="category" required>
+                </div>
+
+                <div class="input-group">
+                    <label>Price</label>
+                    <input type="number" name="price" step="0.01" required>
+                </div>
+
+                <div class="input-group">
+                    <label>Quantity</label>
+                    <input type="number" name="quantity" required>
+                </div>
+
+                <!-- 🔥 New Field for Low Stock Alert -->
+                <div class="input-group">
+                    <label>Minimum Stock Level</label>
+                    <input type="number" name="minimum_stock" required>
+                </div>
+
+                <button type="submit">Add Product</button>
+
+            </form>
+
+        </div>
+    </div>
+
+</body>
+</html>

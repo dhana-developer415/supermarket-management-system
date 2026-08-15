@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>View Products</title>
+
+    <!-- CSS Link -->
+    <link rel="stylesheet" href="{{ url_for('static',filename='view.css') }}">
+</head>
+
+
+<body>
+<div class="container">
+    <!-- 🔹 Subheading -->
+    <h1>All Products</h1>
+
+
+    <table>
+        <thead>
+            <tr>
+                <th>Product Name</th>
+                <th>Category</th>
+                <th>Price</th>
+                <th>Quantity</th>
+                <th>Minimum Stock</th>
+                <th>Action</th>
+            </tr>
+        </thead>
+<tbody>
+{% for p in products %}
+<tr {% if p['quantity']|int < p['minimum_stock']|int %}class="low"{% endif %}>
+    <td>{{ p['name'] }}</td>
+    <td>{{ p['category'] }}</td>
+    <td>₹{{ p['price'] }}</td>
+    <td{% if p['quantity']|int < p['minimum_stock']|int %} class="low-text"{% endif %}>{{ p['quantity'] }}</td>
+    <td>{{ p['minimum_stock'] }}</td>
+    <td>
+        <a href="/edit/{{ p['id'] }}"><button class="edit">Edit</button></a>
+        <a href="/delete/{{ p['id'] }}"><button class="delete">Delete</button></a>
+    </td>
+</tr>
+{% endfor %}
+</tbody>
+</body>
+</html>
