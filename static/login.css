@@ -1,1 +1,74 @@
+/* Full Page Background */
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
 
+    /* Background Image */
+    background: url("loginpic.jpg") no-repeat center center fixed;
+    background-size: cover;
+}
+
+/* Center Container */
+.login-container {
+    height: 100vh;
+
+    /* 🔥 Background Color Overlay (Change Here) */
+    background: rgba(0,0,0,0.6);
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Login Box */
+.login-box {
+    width: 350px;
+    padding: 40px;
+    border-radius: 15px;
+
+    /* Glass Effect */
+    background: rgba(255, 255, 255, 0.15);
+    backdrop-filter: blur(10px);
+
+    text-align: center;
+    color: white;
+}
+
+/* Heading */
+.login-box h2 {
+    margin-bottom: 10px;
+    font-size: 28px;
+}
+
+.login-box p {
+    margin-bottom: 25px;
+    font-size: 14px;
+}
+
+/* Input Fields */
+.input-group input {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 18px;
+    border: none;
+    border-radius: 8px;
+    outline: none;
+}
+
+/* Button */
+button {
+    width: 100%;
+    padding: 10px;
+    border: none;
+    border-radius: 8px;
+    background: #00ffff;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+/* Hover Effect */
+button:hover {
+    background: #00cccc;
+    transform: scale(1.05);
+}
