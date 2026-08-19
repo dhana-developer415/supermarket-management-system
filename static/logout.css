@@ -1,1 +1,13 @@
+body {
+    font-family: Arial, sans-serif;
 
+    /* Background Image Link */
+    background-image: url("logoutpic.jpg");
+
+    background-size: cover;      /* Full screen */
+    background-position: center; /* Center align */
+    background-repeat: no-repeat;
+
+    margin: 0;
+    height: 100vh;
+}
