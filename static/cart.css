@@ -1,1 +1,36 @@
+body {
+    font-family: Arial, sans-serif;
 
+    /* Background Image */
+    background-image: url("cartpic.jpg");
+
+    /* If image not load aana backup color */
+    background-color: #1985e4;
+
+    background-size: cover;        /* Full screen cover */
+    background-position: center;   /* Center image */
+    background-repeat: no-repeat;  /* No repeat */
+    height: 100vh;
+    margin: 0;
+}
+
+/* Cart box */
+.cart-container {
+    width: 70%;
+    margin: 50px auto;
+    background-color: rgba(228, 49, 49, 0.9); /* Light transparent white */
+    padding: 30px;
+    border-radius: 10px;
+}
+
+/* Header color change */
+h2 {
+    text-align: center;
+    color: darkblue;
+}
+
+/* Table header color */
+th {
+    background-color: #ff6b6b;   /* Change color here */
+    color: white;
+}
