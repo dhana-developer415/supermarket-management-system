@@ -1,1 +1,16 @@
+body {
+    font-family: Arial, sans-serif;
 
+    /* Background color as layer */
+    background: linear-gradient(to right, #74ebd5, #ACB6E5);
+
+    /* Image add panna (optional) */
+    background-image: url("managepic.jpg");
+
+    /* இரண்டையும் join பண்ணும் */
+    background-blend-mode: overlay;
+
+    background-size: cover;
+    background-position: center;
+    margin: 0;
+}
