@@ -1,1 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Admin Dashboard</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
+    <!-- CSS File Link -->
+    <link rel="stylesheet" href="{{ url_for('static',filename= 'admin.css')}}">
+</head>
+
+<body>
+
+    <div class="dashboard-container">
+        <h1>Admin Dashboard</h1>
+        <p>Welcome, Admin</p>
+
+        <div class="menu">
+            <a href="/add_product">Add Product</a>
+            <a href="/admin_view_products">View Products</a>
+            <a href="/manage_stock">Manage Stock</a>
+           <a href="/">Logout</a>
+        </div>
+    </div>
+
+</body>
+</html>
