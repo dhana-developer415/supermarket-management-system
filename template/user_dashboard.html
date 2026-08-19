@@ -1,1 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>User Dashboard</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
+    <!-- CSS File Link -->
+    <link rel="stylesheet" href="{{ url_for('static',filename='user.css') }}">
+</head>
+
+<body>
+
+    <div class="dashboard-container">
+        <h1>User Dashboard</h1>
+        <p>Welcome, User</p>
+
+        <div class="menu">
+            <a href="/view_products">View Products</a>
+            <a href="/my_cart">My Cart</a>
+            <a href="/purchase_history">Purchase History</a>
+            <a href="/logout">Logout</a>
+
+        </div>
+    </div>
+
+</body>
+</html>
