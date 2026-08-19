@@ -1,1 +1,55 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
 
+    /* Background Image */
+    background: url("userpic.jpg") no-repeat center center fixed;
+    background-size: cover;
+}
+
+/* Overlay Container */
+.dashboard-container {
+    height: 100vh;
+
+    /* 🔥 Background color change here */
+    background: rgba(0, 0, 0, 0.7);
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    color: white;
+    text-align: center;
+}
+
+/* Heading */
+.dashboard-container h1 {
+    font-size: 40px;
+    margin-bottom: 10px;
+}
+
+.dashboard-container p {
+    margin-bottom: 40px;
+    font-size: 18px;
+}
+
+/* Menu Buttons */
+.menu a {
+    display: block;
+    width: 250px;
+    margin: 12px;
+    padding: 12px;
+    text-decoration: none;
+    background: #00ffff;
+    color: black;
+    font-weight: bold;
+    border-radius: 8px;
+    transition: 0.3s;
+}
+
+/* Hover Effect */
+.menu a:hover {
+    background: #00cccc;
+    transform: scale(1.05);
+}
